@@ -1,10 +1,19 @@
 import settings
 import torch
 import torchvision
+from loader.ResNet_Attention import resnet18
 
 def loadmodel(hook_fn):
     if settings.MODEL_FILE is None:
-        model = torchvision.models.__dict__[settings.MODEL](pretrained=True)
+        # load pytorch ResNet
+        # model = torch.hub.load('pytorch/vision:v0.10.0', 'resnet18', pretrained=False)
+        # state_dict = torch.load('zoo/cifar10_90_net.pth')
+        # new_state_dict = model.state_dict()
+        # new_state_dict.update(state_dict)
+        # model.load_state_dict(new_state_dict)
+        
+        # load our own model
+        model = resnet18(pretrained=True, progress=True)
     else:
         checkpoint = torch.load(settings.MODEL_FILE)
         if type(checkpoint).__name__ == 'OrderedDict' or type(checkpoint).__name__ == 'dict':
