@@ -1,7 +1,7 @@
 # Network Dissection Lite in PyTorch
 
 ## Introduction
-This repository is fork of [NetDissect](https://github.com/CSAILVision/NetDissect), which contains the demo code for the work [Network Dissection: Quantifying Interpretability of Deep Visual Representations](http://netdissect.csail.mit.edu). This code is written in pytorch and python3.6, tested on Ubuntu 20.04(google colab). 
+This repository is fork of [NetDissect](https://github.com/CSAILVision/NetDissect), which contains the demo code for the work [Network Dissection: Quantifying Interpretability of Deep Visual Representations](http://netdissect.csail.mit.edu). We also test the Network Dissection results on ResNet18 and ResNet18+CBAM. This code is written in pytorch and python3.6, tested on Ubuntu 20.04(google colab). 
 
 
 
